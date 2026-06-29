@@ -1,0 +1,623 @@
+
+SHIPU KUMAR <shipukumar009@gmail.com>
+21:02 (30 minutes ago)
+to shipukumar09042003
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Prachi 💜</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-deep:        #1c1520;
+      --bg-mid:         #2e2438;
+      --lavender-dark:  #6b5b8e;
+      --lavender:       #9b86c2;
+      --lavender-light: #c8b8e8;
+      --nude-warm:      #e8d5c0;
+      --nude-pale:      #f5ede2;
+      --nude-blush:     #d4b89a;
+      --text-main:      #f0e8f5;
+      --text-muted:     #b8a8cc;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg-deep);
+      color: var(--text-main);
+      font-family: 'Cormorant Garamond', serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── PETAL CANVAS ── */
+    #petal-canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 24px;
+      text-align: center;
+    }
+
+    /* ── HERO ── */
+    #hero {
+      background: radial-gradient(ellipse at 50% 60%, rgba(107,91,142,0.35) 0%, transparent 70%);
+    }
+
+    .hero-eyebrow {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(1.1rem, 3vw, 1.6rem);
+      color: var(--lavender-light);
+      letter-spacing: 0.06em;
+      margin-bottom: 18px;
+      opacity: 0;
+      animation: fadeUp 1s ease 0.4s forwards;
+    }
+
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(4rem, 14vw, 10rem);
+      font-weight: 700;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--nude-pale) 0%, var(--lavender-light) 45%, var(--lavender) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      opacity: 0;
+      animation: fadeUp 1s ease 0.7s forwards;
+    }
+
+    .hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 2.5vw, 1.35rem);
+      color: var(--text-muted);
+      margin-top: 24px;
+      max-width: 480px;
+      line-height: 1.8;
+      opacity: 0;
+      animation: fadeUp 1s ease 1s forwards;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: var(--lavender-light);
+      font-family: 'Dancing Script', cursive;
+      font-size: 0.9rem;
+      opacity: 0;
+      animation: fadeIn 1s ease 2.2s forwards;
+    }
+    .scroll-hint span { font-size: 1.4rem; animation: bob 2s ease-in-out infinite; }
+
+    /* ── DIVIDER ── */
+    .divider {
+      width: 120px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--lavender), transparent);
+      margin: 28px auto;
+    }
+
+    /* ── REASONS ── */
+    #reasons {
+      background: linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-mid) 50%, var(--bg-deep) 100%);
+    }
+
+    .section-title {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      color: var(--lavender-light);
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      font-style: italic;
+      color: var(--text-muted);
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      max-width: 520px;
+      line-height: 1.8;
+      margin-bottom: 48px;
+    }
+    .section-intro em { color: var(--nude-warm); font-style: normal; }
+
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 860px;
+      width: 100%;
+    }
+
+    .reason-card {
+      background: linear-gradient(135deg, rgba(46,36,56,0.7) 0%, rgba(107,91,142,0.18) 100%);
+      border: 1px solid rgba(200,184,232,0.2);
+      border-radius: 20px;
+      padding: 28px 22px;
+      transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+      cursor: default;
+    }
+    .reason-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(200,184,232,0.5);
+      background: linear-gradient(135deg, rgba(46,36,56,0.85) 0%, rgba(107,91,142,0.3) 100%);
+    }
+
+    .reason-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+
+    .reason-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      color: var(--nude-pale);
+      margin-bottom: 8px;
+    }
+
+    .reason-text {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      font-style: italic;
+    }
+/* ── PHOTOS ── */
+#photos {
+    min-height: auto !important;
+    padding: 70px 24px;
+    background: linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-mid) 50%, var(--bg-deep) 100%);
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 22px;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.photo-frame {
+    width: 300px;
+    height: 420px;      /* Portrait frame */
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1.5px solid rgba(200,184,232,0.25);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    transition: transform .3s ease,
+                box-shadow .3s ease,
+                border-color .3s ease;
+}
+
+.photo-frame:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 16px 48px rgba(107,91,142,0.4);
+    border-color: rgba(200,184,232,0.55);
+}
+
+.photo-frame:nth-child(even):hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;   /* Keeps faces visible */
+    display: block;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-frame {
+        width: 100%;
+        max-width: 320px;
+        height: 430px;
+        margin: auto;
+    }
+}
+    /* ── LETTER ── */
+    #letter {
+      background: radial-gradient(ellipse at 50% 40%, rgba(107,91,142,0.15) 0%, transparent 70%);
+    }
+
+    .letter-wrap {
+      max-width: 640px;
+      width: 100%;
+      background: linear-gradient(160deg, rgba(46,36,56,0.65) 0%, rgba(28,21,32,0.8) 100%);
+      border: 1px solid rgba(200,184,232,0.25);
+      border-radius: 24px;
+      padding: clamp(32px, 6vw, 60px);
+      position: relative;
+    }
+
+    .letter-wrap::before {
+      content: '\201C';
+      position: absolute;
+      top: 10px; left: 22px;
+      font-family: 'Playfair Display', serif;
+      font-size: 6rem;
+      color: rgba(200,184,232,0.1);
+      line-height: 1;
+    }
+
+    .letter-body {
+      font-size: clamp(1rem, 2.2vw, 1.18rem);
+      line-height: 1.95;
+      color: var(--text-main);
+      font-style: italic;
+    }
+
+    .letter-body em {
+      font-style: normal;
+      color: var(--lavender-light);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .letter-sign {
+      margin-top: 32px;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.6rem;
+      color: var(--nude-warm);
+      text-align: right;
+    }
+
+    /* ── QUESTION ── */
+    #question {
+      background: radial-gradient(ellipse at 50% 50%, rgba(107,91,142,0.25) 0%, transparent 70%);
+    }
+
+    .big-question {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(2rem, 7vw, 4.5rem);
+      line-height: 1.2;
+      max-width: 700px;
+      margin-bottom: 16px;
+      color: var(--nude-pale);
+    }
+
+    .big-question span { color: var(--lavender-light); }
+
+    .question-sub {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+      color: var(--nude-blush);
+      margin-bottom: 52px;
+    }
+
+    .btns {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-yes, .btn-maybe {
+      padding: 16px 44px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .btn-yes {
+      background: linear-gradient(135deg, var(--lavender), var(--lavender-dark));
+      color: var(--nude-pale);
+      box-shadow: 0 4px 28px rgba(155,134,194,0.45);
+    }
+    .btn-yes:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 40px rgba(155,134,194,0.7);
+    }
+
+    .btn-maybe {
+      background: transparent;
+      color: var(--nude-warm);
+      border: 1.5px solid rgba(232,213,192,0.4);
+    }
+    .btn-maybe:hover {
+      transform: scale(1.08);
+      border-color: var(--nude-warm);
+      background: rgba(232,213,192,0.07);
+    }
+
+    /* ── YES SCREEN ── */
+    #yes-screen {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: radial-gradient(ellipse at 50% 50%, #2e2438 0%, #1c1520 100%);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 24px;
+    }
+    #yes-screen.show { display: flex; }
+
+    .yes-emoji {
+      font-size: 5rem;
+      animation: pop 0.6s cubic-bezier(.36,1.5,.45,1) forwards;
+      margin-bottom: 20px;
+    }
+
+    .yes-title {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      background: linear-gradient(135deg, var(--nude-pale), var(--lavender-light), var(--lavender));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .yes-sub {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(1.2rem, 4vw, 1.8rem);
+      color: var(--text-muted);
+      max-width: 480px;
+      line-height: 1.6;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 0.75; }
+    }
+    @keyframes bob {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(8px); }
+    }
+    @keyframes pop {
+      0%   { transform: scale(0); opacity: 0; }
+      70%  { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+    }
+    @media (max-width: 480px) {
+      .btns { flex-direction: column; align-items: center; }
+      .btn-yes, .btn-maybe { width: 220px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="petal-canvas"></canvas>
+
+<!-- HERO -->
+<section id="hero">
+  <p class="hero-eyebrow">A letter from my heart to…</p>
+  <h1 class="hero-name">Prachi</h1>
+  <p class="hero-sub">Some feelings are too big for ordinary words.<br>So I wrote them in the only language I know — honesty.</p>
+  <div class="scroll-hint">
+    <p>scroll down</p>
+    <span>↓</span>
+  </div>
+</section>
+
+<!-- REASONS -->
+<section id="reasons">
+  <p class="section-title">Why you, Prachi?</p>
+  <p class="section-intro">Not because the universe decided. Because of a thousand little things that are entirely and only <em>you.</em></p>
+  <div class="reasons-grid">
+    <div class="reason-card">
+      <span class="reason-icon">✨</span>
+      <p class="reason-title">The way you light up a room</p>
+      <p class="reason-text">You walk in and somehow the whole place feels warmer. I don't think you even know you do it.</p>
+    </div>
+    <div class="reason-card">
+      <span class="reason-icon">💬</span>
+      <p class="reason-title">Your honesty</p>
+      <p class="reason-text">You say what you mean, and you mean what you say. In a world of noise, that is rare and beautiful.</p>
+    </div>
+    <div class="reason-card">
+      <span class="reason-icon">🌙</span>
+      <p class="reason-title">How you care</p>
+      <p class="reason-text">You remember the little things. The small kindnesses you give without thinking say everything about who you are.</p>
+    </div>
+    <div class="reason-card">
+      <span class="reason-icon">😂</span>
+      <p class="reason-title">Your laugh</p>
+      <p class="reason-text">I would do almost anything to hear it. It makes the ordinary feel like a celebration.</p>
+    </div>
+    <div class="reason-card">
+      <span class="reason-icon">🌿</span>
+      <p class="reason-title">Your quiet strength</p>
+      <p class="reason-text">You carry hard things with grace, and you make it look effortless even when I know it isn't.</p>
+    </div>
+    <div class="reason-card">
+      <span class="reason-icon">🫀</span>
+      <p class="reason-title">The feeling around you</p>
+      <p class="reason-text">Being near you feels like exhaling after holding my breath for too long. Like calm. Like home.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTOS -->
+<section id="photos">
+  <p class="section-title">Us, in moments 🌸</p>
+  <div class="divider"></div>
+
+  <div class="photo-grid">
+    <div class="photo-frame">
+      <img src="photo1.jpeg" alt="Memory 1">
+    </div>
+
+    <div class="photo-frame">
+      <img src="photo2.jpeg" alt="Memory 2">
+    </div>
+
+    <div class="photo-frame">
+      <img src="photo3.jpeg" alt="Memory 3">
+    </div>
+
+    <div class="photo-frame">
+      <img src="photo4.jpeg" alt="Memory 4">
+    </div>
+  </div>
+</section>
+
+<!-- LETTER -->
+<section id="letter">
+  <p class="section-title">A letter I've rewritten a hundred times</p>
+  <div class="divider"></div>
+  <div class="letter-wrap">
+    <p class="letter-body">
+      Dear <em>Prachi</em>,<br><br>
+      I've tried to write this a hundred times, and every version sounded too rehearsed, too careful. So here it is — unpolished and true.<br><br>
+      I didn't plan to feel this way. You happened quietly, the way the best things do: slowly, then all at once. I noticed the way you listen — <em>really</em> listen — like the person talking is the only person in the world. I noticed the softness in your eyes when you laugh. I noticed that you make ordinary days feel like they count for something.<br><br>
+      I don't want to imagine a chapter of my life where I didn't at least ask. Because the only thing scarier than asking is spending a lifetime wondering what you would have said.<br><br>
+      So, I'm asking.
+    </p>
+    <p class="letter-sign">— Yours, if you'll have me 💜</p>
+  </div>
+</section>
+
+<!-- QUESTION -->
+<section id="question">
+  <h2 class="big-question">Prachi, will you <span>be mine?</span></h2>
+  <p class="question-sub">…or at least consider it? 🌸</p>
+  <div class="btns">
+    <button class="btn-yes" onclick="showYes()">Yes, absolutely 💜</button>
+    <button class="btn-maybe" onclick="showMaybe()">Maybe yes 🌿</button>
+  </div>
+  <div id="maybe-msg" style="display:none; margin-top:28px; font-style:italic; color:var(--text-muted); font-size:1rem; max-width:360px; line-height:1.7;">
+    I'll wait. Good things are worth waiting for. 🌙
+  </div>
+</section>
+
+<!-- YES SCREEN -->
+<div id="yes-screen">
+  <div class="yes-emoji">💜</div>
+  <h2 class="yes-title">She said yes! 🎉</h2>
+  <p class="yes-sub">You just made the happiest person in the world even happier. This is only the beginning, Prachi. ✨</p>
+</div>
+
+<script>
+  /* ── PETALS ── */
+  const canvas = document.getElementById('petal-canvas');
+  const ctx = canvas.getContext('2d');
+  let petals = [];
+  // nude + lavender petal colors
+  const COLORS = ['#c8b8e8','#9b86c2','#e8d5c0','#d4b89a','#b89fd4','#f0e8f5','#6b5b8e'];
+
+  function resize() {
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  function randomPetal() {
+    return {
+      x:       Math.random() * canvas.width,
+      y:       -20,
+      r:       4 + Math.random() * 6,
+      color:   COLORS[Math.floor(Math.random() * COLORS.length)],
+      speed:   0.6 + Math.random() * 1.2,
+      drift:   (Math.random() - 0.5) * 0.8,
+      spin:    (Math.random() - 0.5) * 0.04,
+      angle:   Math.random() * Math.PI * 2,
+      opacity: 0.35 + Math.random() * 0.5,
+    };
+  }
+
+  function drawPetal(p) {
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.angle);
+    ctx.globalAlpha = p.opacity;
+    ctx.fillStyle = p.color;
+    ctx.beginPath();
+    ctx.ellipse(0, 0, p.r, p.r * 1.65, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+  }
+
+  function tick() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (Math.random() < 0.18) petals.push(randomPetal());
+    petals = petals.filter(p => p.y < canvas.height + 20);
+    for (const p of petals) {
+      p.y     += p.speed;
+      p.x     += p.drift + Math.sin(p.y * 0.015) * 0.4;
+      p.angle += p.spin;
+      drawPetal(p);
+    }
+    requestAnimationFrame(tick);
+  }
+  tick();
+
+  /* ── FADE-IN ON SCROLL ── */
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.style.animation = 'fadeUp 0.8s ease forwards';
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reason-card, .letter-wrap').forEach(el => {
+    el.style.opacity = '0';
+    observer.observe(el);
+  });
+
+  /* ── BUTTONS ── */
+  function showYes() {
+    document.getElementById('yes-screen').classList.add('show');
+    launchBurst();
+  }
+
+  function showMaybe() {
+    const m = document.getElementById('maybe-msg');
+    m.style.display = 'block';
+    m.style.animation = 'fadeUp 0.6s ease forwards';
+  }
+
+  function launchBurst() {
+    for (let i = 0; i < 90; i++) {
+      setTimeout(() => {
+        const p = randomPetal();
+        p.speed = 1.5 + Math.random() * 2.2;
+        petals.push(p);
+      }, i * 25);
+    }
+  }
+</script>
+</body>
+</html>
